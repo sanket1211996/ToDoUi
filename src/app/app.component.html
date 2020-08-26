@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand">TODO APP</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <ul class="navbar-nav mr-auto pr-5"></ul>
+      <ul class="navbar-nav">
+        <button type="button" class="btn btn-danger mr-2"  *ngIf="!authservice.isLoggedIn()"
+          routerLink="/register">Register</button>
+          <div> </div>
+        <button type="button" class="btn btn-danger mr-2" *ngIf="!authservice.isLoggedIn()"
+          routerLink="/login">Login</button>
+        <div> </div>
+        <button type="button" class="btn btn-danger mr-2" *ngIf="authservice.isLoggedIn()"
+          (click)="logout()">Logout</button>
+      </ul>
+
+    </ul>
+  </div>
+</nav>
+<div class="container" >
+  <router-outlet></router-outlet>
+</div>

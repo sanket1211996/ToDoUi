@@ -1,0 +1,61 @@
+<!-- <mat-card>
+  <mat-card-header>
+    <mat-toolbar class="toolbar">
+      <mat-card-title>TODO Information</mat-card-title>
+      <span class="toolbar-spacer"></span>
+      <mat-icon (click)="onNoClick()">cancel</mat-icon>
+    </mat-toolbar>
+  </mat-card-header>
+  <mat-card-content>
+    <div class="container">
+      <form (submit)="saveToDo()">
+        <div class="form-group">
+
+          <div class="row">
+            <div class="col">
+              <label>Title</label>
+              <input type="text" [(ngModel)]="todo.title" name="title">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <label>Description</label>
+              <input type="text" [(ngModel)]="todo.description" name="description">
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <button type="submit" class="btn btn-success">
+                <mat-icon>save</mat-icon>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </form>
+    </div>
+  </mat-card-content>
+</mat-card> -->
+
+<form>
+
+  <div class="form-group">
+    <label for="title">Title</label>
+    <input type="text" class="form-control" id="title" name="title" [(ngModel)] ="todo.title">
+  </div>
+<div class="form-group">
+  <label for="description">Description</label>
+  <textarea class="form-control" id="description" rows="3" name="description" [(ngModel)] ="todo.description"></textarea>
+</div>
+
+<button type="submit" class="btn btn-success" (click) ="saveToDo()">
+  Save
+</button>
+
+<button type="submit" class="btn btn-success" (click) ="onNoClick()">
+  Close
+</button>
+
+</form>
