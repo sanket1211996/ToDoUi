@@ -4,6 +4,7 @@
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.5.",
   "main": "karma.conf.js",
   "dependencies": {
+    "express":"*",
     "bcrypt": "^5.0.0",
     "ngx-pagination": "^5.0.0"
   },
